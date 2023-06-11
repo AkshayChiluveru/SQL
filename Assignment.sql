@@ -86,3 +86,10 @@ WHERE Snum IN (
     HAVING SUM(Amt) > 2000
 );
 
+-- 3.Count the number of Salesperson belonging to Newyork.
+
+SELECT COUNT(*)
+FROM SalesPeople
+WHERE City = 'Newyork';
+
+
