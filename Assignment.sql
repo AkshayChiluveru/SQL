@@ -68,6 +68,10 @@ VALUES
 
 
 
+--  1.Count the number of Salesperson whose name begin with ‘a’/’A’.
+
+SELECT COUNT(*)
+FROM SalesPeople
+WHERE UPPER(LEFT(Sname, 1)) = 'A';
 
 
-    
