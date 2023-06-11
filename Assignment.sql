@@ -75,3 +75,14 @@ FROM SalesPeople
 WHERE UPPER(LEFT(Sname, 1)) = 'A';
 
 
+-- 2. Display all the Salesperson whose all orders worth is more than Rs. 2000.
+
+SELECT Snum, Sname, City, Comm
+FROM SalesPeople
+WHERE Snum IN (
+    SELECT Snum
+    FROM Orders
+    GROUP BY Snum
+    HAVING SUM(Amt) > 2000
+);
+
