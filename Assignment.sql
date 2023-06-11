@@ -93,3 +93,9 @@ FROM SalesPeople
 WHERE City = 'Newyork';
 
 
+-- 4.Display the number of Salespeople belonging to London and belonging to Paris.
+
+SELECT City, COUNT(*) as Count
+FROM SalesPeople
+WHERE City IN ('London', 'Paris')
+GROUP BY City;
