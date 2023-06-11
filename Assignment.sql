@@ -99,3 +99,11 @@ SELECT City, COUNT(*) as Count
 FROM SalesPeople
 WHERE City IN ('London', 'Paris')
 GROUP BY City;
+
+
+
+-- 5.Display the number of orders taken by each Salesperson and their date of orders.
+
+SELECT S.Snum, S.Sname, O.Onum, O.Odate
+FROM SalesPeople S
+JOIN Orders O ON S.Snum = O.Snum;
